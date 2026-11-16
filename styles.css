@@ -1,0 +1,1400 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+    --cream: #f5f0e8;
+    --white: #fffdf9;
+    --ink: #34342f;
+    --rust: #a75e49;
+    --sage: #89927b;
+    --blue: #8299a2;
+    --pink: #d5a6a1;
+    --line: #ded6ca;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.7;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--rust);
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover,
+.text-link:hover {
+    color: var(--rust);
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+    padding: 75px 8%;
+}
+
+.hero h1,
+.page h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 70px);
+    line-height: 1.15;
+    font-weight: 500;
+    margin: 10px 0 20px;
+}
+
+.hero-text > p:not(.eyebrow) {
+    max-width: 520px;
+    color: #65645e;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.eyebrow {
+    color: var(--rust);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 13px 24px;
+    background: var(--rust);
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.button:hover {
+    background: #854735;
+}
+
+.intro,
+.featured,
+.designer-section,
+.skills,
+.contact {
+    padding: 65px 8%;
+}
+
+.intro {
+    background: #e9e4d9;
+    text-align: center;
+}
+
+.intro h2,
+.featured h2,
+.designer-section h2,
+.skills h2,
+.contact h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 500;
+}
+
+.intro > p:not(.eyebrow) {
+    max-width: 650px;
+    margin: auto;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--rust);
+    text-decoration: none;
+}
+
+.featured {
+    background: var(--white);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background: var(--white);
+    padding-bottom: 15px;
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.project-card img {
+    width: 100%;
+    height: 245px;
+    object-fit: cover;
+    background: #e1d8ca;
+}
+
+.project-card h3,
+.project-card p {
+    margin: 10px 14px 0;
+}
+
+.project-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+}
+
+.project-card p {
+    color: #77736c;
+    font-size: 13px;
+}
+
+.page {
+    min-height: 75vh;
+    padding: 65px 8%;
+}
+
+.page-intro {
+    max-width: 650px;
+    color: #6b6962;
+}
+
+.about-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.about-image {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+}
+
+.about-layout h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.skills {
+    padding: 40px 0;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-list span {
+    padding: 10px 18px;
+    background: #e5ddd0;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+.contact {
+    background: #e9e4d9;
+    padding: 40px;
+}
+
+.filters,
+.palette-buttons,
+.house-options,
+.material-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.filter-button,
+.palette-button,
+.house-choice,
+.material-swatch {
+    border: 1px solid var(--line);
+    background: var(--white);
+    padding: 11px 19px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.filter-button.active,
+.filter-button:hover,
+.palette-button:hover,
+.house-choice:hover,
+.material-swatch:hover {
+    background: var(--rust);
+    color: white;
+}
+
+.project-card.hidden {
+    display: none;
+}
+
+.designer-section {
+    margin-top: 30px;
+    background: var(--white);
+}
+
+.room-preview {
+    position: relative;
+    height: 350px;
+    max-width: 750px;
+    margin: 25px auto;
+    overflow: hidden;
+    background: #e8dccc;
+    border: 12px solid #c8b8a3;
+    box-shadow: inset 0 -75px #c5a98c;
+}
+
+.room-window {
+    position: absolute;
+    top: 35px;
+    left: 12%;
+    width: 120px;
+    height: 130px;
+    background: #b7d0d0;
+    border: 9px solid #fffdf9;
+}
+
+.room-art {
+    position: absolute;
+    top: 45px;
+    right: 18%;
+    width: 95px;
+    height: 110px;
+    background: #d5a6a1;
+    border: 8px solid #fffdf9;
+}
+
+.room-sofa {
+    position: absolute;
+    bottom: 45px;
+    left: 27%;
+    width: 46%;
+    height: 85px;
+    background: #9a7566;
+    border-radius: 25px 25px 8px 8px;
+}
+
+.room-rug {
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 60%;
+    height: 55px;
+    background: #b7a78c;
+    border-radius: 50%;
+}
+
+.room-table {
+    position: absolute;
+    bottom: 38px;
+    right: 15%;
+    width: 80px;
+    height: 45px;
+    background: #805b42;
+    border-radius: 50%;
+}
+
+.room-plant {
+    position: absolute;
+    bottom: 50px;
+    right: 5%;
+    font-size: 55px;
+    color: #536b50;
+}
+
+.control-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.control-grid label {
+    display: grid;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.control-grid input {
+    width: 100px;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+.house-display,
+.material-info {
+    background: var(--cream);
+    padding: 30px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.little-house {
+    width: 190px;
+    margin: 25px auto;
+}
+
+.house-roof {
+    width: 0;
+    height: 0;
+    margin: auto;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 90px solid var(--rust);
+}
+
+.house-body {
+    position: relative;
+    width: 175px;
+    height: 125px;
+    margin: auto;
+    background: #e2c9a8;
+    border: 3px solid #8e7055;
+}
+
+.house-window {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    width: 45px;
+    height: 45px;
+    background: #9fc0c4;
+    border: 4px solid white;
+}
+
+.house-door {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    width: 45px;
+    height: 75px;
+    background: #8c634d;
+}
+
+.little-house.modern .house-roof {
+    border-bottom-color: #8299a2;
+}
+
+.little-house.modern .house-body {
+    background: #d9d9d3;
+}
+
+.little-house.cabin .house-roof {
+    border-bottom-color: #58634e;
+}
+
+.little-house.cabin .house-body {
+    background: #a87954;
+}
+
+.material-swatch {
+    min-width: 100px;
+    height: 75px;
+}
+
+.material-swatch.oak {
+    background: #c59c6d;
+    color: #34291f;
+}
+
+.material-swatch.terrazzo {
+    background: #d8d0c3;
+    color: #34342f;
+}
+
+.material-swatch.boucle {
+    background: #e8dfd0;
+    color: #34342f;
+}
+
+.material-swatch.glass {
+    background: #a9c7c7;
+    color: #34342f;
+}
+
+#materialChip {
+    width: 100px;
+    height: 80px;
+    margin: auto;
+    background: #c59c6d;
+    border: 1px solid #b8aa98;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 30px 8%;
+    background: #34342f;
+    color: white;
+    font-size: 13px;
+}
+
+footer a {
+    color: white;
+}
+
+@media (max-width: 750px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero,
+    .about-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image img {
+        height: 300px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page {
+        padding: 40px 6%;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}/* INTERACTIVE STUDIO OPTIONS */
+
+.option-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.color-option,
+.furniture-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background: #fffdf9;
+    border: 1px solid #ded6ca;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.color-option span,
+.furniture-option span {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+
+.custom-color {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.custom-color input {
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.seating-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.seating-option {
+    padding: 20px;
+    background: #f5f0e8;
+    border: 1px solid #ded6ca;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.seating-option:hover,
+.seating-option.selected {
+    border: 2px solid #a75e49;
+}
+
+.seating-option h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+.seating-option p {
+    font-size: 12px;
+    color: #777;
+}
+
+.seat-icon {
+    height: 65px;
+    width: 90px;
+    margin: auto;
+    background: #a87961;
+    border-radius: 15px 15px 5px 5px;
+    position: relative;
+}
+
+.sofa-icon {
+    width: 90px;
+}
+
+.sectional-icon {
+    width: 90px;
+    border-radius: 15px 15px 15px 5px;
+}
+
+.chair-icon {
+    width: 50px;
+    height: 70px;
+    border-radius: 15px 15px 5px 5px;
+}
+
+.loveseat-icon {
+    width: 70px;
+    height: 60px;
+}
+
+.curved-icon {
+    width: 95px;
+    border-radius: 40px 40px 10px 10px;
+}
+
+.bench-icon {
+    width: 95px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+.material-swatch.marble {
+    background: #e8e5de;
+    color: #34342f;
+}
+
+.material-swatch.concrete {
+    background: #a8a8a2;
+    color: #34342f;
+}
+
+@media (max-width: 750px) {
+    .option-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .seating-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}/* ==================================
+   REALISTIC INTERACTIVE DESIGN STUDIO
+================================== */
+
+.studio-page {
+    max-width: 1500px;
+    margin: auto;
+}
+
+.studio-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ROOM PREVIEW */
+
+.real-room {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: 540px;
+    margin: 30px auto 0;
+    overflow: hidden;
+    background: #e9dfd0;
+    box-shadow: 0 15px 35px rgba(50, 40, 30, .13);
+}
+
+.back-wall {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 68%;
+    background: #e9dfd0;
+    transition: background .3s;
+    z-index: 1;
+}
+
+.floor {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 34%;
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 130px,
+            rgba(90,60,35,.08) 131px,
+            transparent 133px
+        ),
+        linear-gradient(#c9ad8b, #b18d68);
+    transform: perspective(500px) rotateX(5deg);
+    transform-origin: bottom;
+    z-index: 2;
+}
+
+/* WINDOW */
+
+.window-frame {
+    position: absolute;
+    top: 12%;
+    left: 10%;
+    width: 24%;
+    height: 53%;
+    background: #f8f5ed;
+    padding: 9px;
+    box-shadow: 4px 5px 12px rgba(0,0,0,.13);
+}
+
+.window-sky {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#a9c6cf 0%, #d9e3d9 65%, #a4b49a 100%);
+}
+
+.window-mullion {
+    position: absolute;
+    background: #f8f5ed;
+    z-index: 2;
+}
+
+.window-mullion.vertical {
+    width: 7px;
+    height: 95%;
+    left: 50%;
+    top: 2.5%;
+}
+
+.window-mullion.horizontal {
+    height: 7px;
+    width: 95%;
+    left: 2.5%;
+    top: 50%;
+}
+
+.window-curtain {
+    position: absolute;
+    top: -5px;
+    right: -18px;
+    width: 20px;
+    height: 110%;
+    background: rgba(248,245,237,.75);
+}
+
+/* WALL ART */
+
+.wall-art {
+    position: absolute;
+    top: 15%;
+    right: 18%;
+    width: 17%;
+    height: 29%;
+    background: #e7dfd2;
+    border: 9px solid #f8f5ed;
+    box-shadow: 2px 4px 9px rgba(0,0,0,.12);
+    display: grid;
+    place-items: center;
+}
+
+.art-shape {
+    width: 70%;
+    height: 75%;
+    background:
+        radial-gradient(ellipse at 65% 30%, #b87c65 0 20%, transparent 21%),
+        linear-gradient(140deg, #87958a 0 45%, #d6b99a 46% 70%, #a75e49 71%);
+}
+
+/* PLANTS */
+
+.plant {
+    position: absolute;
+    bottom: -10px;
+    z-index: 3;
+    text-align: center;
+}
+
+.plant-left {
+    left: 4%;
+}
+
+.plant-right {
+    right: 5%;
+}
+
+.plant-leaves {
+    color: #526d4c;
+    font-size: 95px;
+    line-height: 1;
+    text-shadow: 2px 3px 5px rgba(0,0,0,.15);
+}
+
+.plant-pot {
+    width: 45px;
+    height: 45px;
+    margin: -5px auto 0;
+    background: linear-gradient(90deg, #a36e50, #d1a27b, #95634a);
+    border-radius: 5px 5px 14px 14px;
+}
+
+/* RUG */
+
+.rug {
+    position: absolute;
+    bottom: 2%;
+    left: 17%;
+    width: 65%;
+    height: 90%;
+    border-radius: 50%;
+    background: #d9c9b3;
+    box-shadow: inset 0 0 0 5px rgba(255,255,255,.2);
+    transition: background .3s;
+}
+
+/* SOFA */
+
+.sofa {
+    position: absolute;
+    bottom: 23%;
+    left: 29%;
+    width: 40%;
+    height: 48%;
+    z-index: 5;
+    transition: all .3s;
+}
+
+.sofa-back {
+    position: absolute;
+    top: 0;
+    left: 4%;
+    width: 92%;
+    height: 58%;
+    background: var(--sofa-color, #c6b9a7);
+    border-radius: 23px 23px 9px 9px;
+    box-shadow: inset 0 8px 12px rgba(255,255,255,.17),
+                0 5px 10px rgba(0,0,0,.15);
+}
+
+.sofa-cushions {
+    position: absolute;
+    top: 12%;
+    left: 12%;
+    width: 76%;
+    height: 35%;
+    display: flex;
+    gap: 5px;
+}
+
+.sofa-cushions span {
+    flex: 1;
+    background: rgba(255,255,255,.13);
+    border-radius: 9px;
+    box-shadow: inset 2px 2px 5px rgba(255,255,255,.2);
+}
+
+.sofa-seat {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    width: 90%;
+    height: 43%;
+    background: var(--sofa-color, #c6b9a7);
+    border-radius: 10px 10px 15px 15px;
+    box-shadow: inset 0 -5px 8px rgba(0,0,0,.12);
+}
+
+.sofa-arm {
+    position: absolute;
+    bottom: 5%;
+    width: 12%;
+    height: 49%;
+    background: var(--sofa-color, #c6b9a7);
+    border-radius: 12px;
+    box-shadow: 2px 3px 5px rgba(0,0,0,.13);
+}
+
+.sofa-arm.left {
+    left: 0;
+}
+
+.sofa-arm.right {
+    right: 0;
+}
+
+.sofa-leg {
+    position: absolute;
+    bottom: -2%;
+    width: 5px;
+    height: 12%;
+    background: #634d3d;
+}
+
+.sofa-leg.left {
+    left: 12%;
+}
+
+.sofa-leg.right {
+    right: 12%;
+}
+
+/* DIFFERENT SOFA SHAPES */
+
+.sofa-sectional {
+    width: 47%;
+    height: 50%;
+    left: 25%;
+}
+
+.sofa-sectional .sofa-seat {
+    height: 47%;
+}
+
+.sofa-sectional::after {
+    content: "";
+    position: absolute;
+    right: -15%;
+    bottom: 5%;
+    width: 34%;
+    height: 43%;
+    background: var(--sofa-color, #c6b9a7);
+    border-radius: 10px 12px 12px 5px;
+    box-shadow: inset 0 -5px 8px rgba(0,0,0,.1);
+}
+
+.sofa-curved {
+    width: 43%;
+    left: 28%;
+    height: 45%;
+}
+
+.sofa-curved .sofa-back {
+    border-radius: 45% 45% 10px 10px;
+}
+
+.sofa-curved .sofa-seat {
+    border-radius: 40% 40% 12px 12px;
+}
+
+.sofa-loveseat {
+    width: 30%;
+    left: 34%;
+}
+
+.sofa-chair {
+    width: 21%;
+    left: 39%;
+    height: 48%;
+}
+
+.sofa-chair .sofa-back {
+    border-radius: 35px 35px 10px 10px;
+}
+
+.sofa-bench {
+    width: 39%;
+    left: 30%;
+    height: 30%;
+}
+
+.sofa-bench .sofa-back,
+.sofa-bench .sofa-cushions {
+    display: none;
+}
+
+.sofa-bench .sofa-seat {
+    height: 65%;
+    border-radius: 10px;
+}
+
+/* COFFEE TABLE */
+
+.coffee-table {
+    position: absolute;
+    bottom: 11%;
+    left: 47%;
+    width: 20%;
+    height: 20%;
+    z-index: 6;
+}
+
+.table-top {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 34%;
+    border-radius: 50%;
+    background: linear-gradient(120deg, #b78a5e, #e0bd91, #a47a53);
+    box-shadow: 0 5px 8px rgba(0,0,0,.2);
+}
+
+.table-leg {
+    position: absolute;
+    top: 22%;
+    left: 45%;
+    width: 10%;
+    height: 80%;
+    background: #785a42;
+}
+
+.decor-vase {
+    position: absolute;
+    bottom: 26%;
+    left: 54%;
+    width: 25px;
+    height: 30px;
+    border-radius: 40% 40% 45% 45%;
+    background: #f0e7d9;
+    z-index: 7;
+}
+
+.preview-caption {
+    text-align: center;
+    color: #888078;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* REALISTIC COLOR OPTIONS */
+
+.real-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.visual-option {
+    border: 1px solid #e3ddd3;
+    background: #fffdf9;
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+    color: #34342f;
+}
+
+.visual-option:hover {
+    border-color: #a75e49;
+}
+
+.large-swatch,
+.fabric-swatch {
+    display: block;
+    width: 100%;
+    height: 65px;
+    margin-bottom: 9px;
+}
+
+.fabric-swatch {
+    background-color: var(--swatch);
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(255,255,255,.08) 0,
+        rgba(255,255,255,.08) 2px,
+        transparent 2px,
+        transparent 5px
+    );
+}
+
+.oatmeal { --swatch: #c6b9a7; }
+.camel { --swatch: #a87961; }
+.sage { --swatch: #8c9782; }
+.blue { --swatch: #829da8; }
+.blush { --swatch: #d5a6a1; }
+.charcoal { --swatch: #55534f; }
+.burgundy { --swatch: #7b4545; }
+.natural { --swatch: #d6c6ae; }
+
+.custom-picker {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.custom-picker input {
+    width: 65px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+/* FURNITURE CARDS */
+
+.furniture-grid,
+.material-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.furniture-card,
+.material-card {
+    border: 1px solid #e4ddd2;
+    background: #fffdf9;
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+    color: #34342f;
+    transition: .2s;
+}
+
+.furniture-card:hover,
+.furniture-card.selected,
+.material-card:hover {
+    border: 2px solid #a75e49;
+    transform: translateY(-2px);
+}
+
+.furniture-photo,
+.material-photo {
+    position: relative;
+    height: 125px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #e9e0d4, #d6c8b6);
+    margin-bottom: 12px;
+}
+
+.furniture-card strong,
+.material-card strong {
+    display: block;
+    padding: 0 5px;
+}
+
+.furniture-card span,
+.material-card span {
+    display: block;
+    padding: 3px 5px 5px;
+    color: #80796f;
+    font-size: 12px;
+}
+
+/* MINI FURNITURE */
+
+.mini-sofa,
+.mini-sectional,
+.mini-curved,
+.mini-loveseat,
+.mini-chair,
+.mini-bench {
+    position: absolute;
+    width: 65%;
+    height: 42%;
+    left: 17%;
+    bottom: 20%;
+    background: #b49b83;
+    border-radius: 15px 15px 7px 7px;
+    box-shadow: 0 7px 8px rgba(0,0,0,.14);
+}
+
+.mini-sofa::before,
+.mini-sectional::before,
+.mini-curved::before,
+.mini-loveseat::before,
+.mini-chair::before,
+.mini-bench::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background: rgba(255,255,255,.18);
+    border-radius: 8px;
+}
+
+.mini-sectional {
+    width: 72%;
+    height: 48%;
+}
+
+.mini-sectional::after {
+    content: "";
+    position: absolute;
+    width: 35%;
+    height: 75%;
+    right: -10%;
+    bottom: 0;
+    background: #b49b83;
+    border-radius: 8px;
+}
+
+.mini-curved {
+    border-radius: 50% 50% 12px 12px;
+    background: #a87961;
+}
+
+.mini-loveseat {
+    width: 48%;
+    left: 26%;
+}
+
+.mini-chair {
+    width: 35%;
+    left: 32%;
+    height: 53%;
+    background: #82978a;
+    border-radius: 20px 20px 7px 7px;
+}
+
+.mini-bench {
+    height: 22%;
+    border-radius: 5px;
+    background: #c59c6d;
+}
+
+/* PALETTE CARDS */
+
+.palette-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.palette-card {
+    background: #fffdf9;
+    border: 1px solid #e4ddd2;
+    padding: 15px;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+    color: #34342f;
+}
+
+.palette-card:hover {
+    border-color: #a75e49;
+}
+
+.palette-colors {
+    display: flex;
+    height: 60px;
+    margin-bottom: 13px;
+}
+
+.palette-colors i {
+    flex: 1;
+}
+
+.palette-card strong,
+.palette-card span {
+    display: block;
+}
+
+.palette-card span {
+    font-size: 12px;
+    color: #80796f;
+    margin-top: 4px;
+}
+
+/* MATERIAL TEXTURES */
+
+.oak-texture {
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0 8px,
+            rgba(102,66,35,.16) 9px,
+            transparent 12px
+        ),
+        linear-gradient(110deg, #b88b5d, #dfc29a, #b68b5f);
+}
+
+.terrazzo-texture {
+    background-color: #e2d9ca;
+    background-image:
+        radial-gradient(ellipse at 20% 30%, #a67d63 0 3px, transparent 4px),
+        radial-gradient(ellipse at 70% 65%, #87948a 0 4px, transparent 5px),
+        radial-gradient(ellipse at 45% 80%, #c18e7b 0 3px, transparent 4px),
+        radial-gradient(ellipse at 80% 20%, #8a9da0 0 3px, transparent 4px);
+    background-size: 65px 65px;
+}
+
+.boucle-texture {
+    background-color: #e8dfd0;
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,.8) 1px, transparent 2px);
+    background-size: 5px 5px;
+}
+
+.marble-texture {
+    background:
+        linear-gradient(130deg, transparent 45%, rgba(140,130,120,.25) 46%, transparent 48%),
+        linear-gradient(30deg, transparent 55%, rgba(140,130,120,.18) 56%, transparent 58%),
+        #eeeae2;
+}
+
+.glass-texture {
+    background: linear-gradient(130deg, #d8e9e7, #8eb3b4, #e3efeb);
+}
+
+.concrete-texture {
+    background:
+        radial-gradient(circle, rgba(70,70,70,.08) 1px, transparent 2px),
+        #aaa9a3;
+    background-size: 9px 9px;
+}
+
+.material-info {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+    background: #f5f0e8;
+    padding: 20px;
+    margin-top: 25px;
+}
+
+.material-info #materialChip {
+    flex: 0 0 150px;
+    height: 110px;
+}
+
+.material-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+}
+
+.material-info p {
+    color: #6b6962;
+}
+
+@media (max-width: 750px) {
+    .real-room {
+        height: 350px;
+    }
+
+    .real-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .furniture-grid,
+    .material-gallery,
+    .palette-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .material-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .studio-heading {
+        align-items: flex-start;
+    }
+}
+/* HAND-DRAWN FURNITURE STYLE */
+
+.furniture-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  background: #f3f0e9;
+  padding: 8px;
+  border-radius: 6px;
+
+  /* Slight illustrated appearance */
+  filter: saturate(.75) contrast(.95);
+}
+
+.furniture-card {
+  background: #f8f6f1;
+  border: 1px solid #d8d0c5;
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+.furniture-card:hover {
+  transform: translateY(-2px);
+  border-color: #a58b78;
+}
+
+/* Main room preview */
+.room-frame {
+  background: #f1ede5;
+  border: 1px solid #d8d0c5;
+}
+
+/* Furniture illustration */
+.furniture-overlay {
+  object-fit: contain;
+  filter: saturate(.8);
+}
+
+/* Hand-drawn style labels */
+.room-label {
+  font-family: Georgia, serif;
+  letter-spacing: 1px;
+  background: rgba(255,255,255,.7);
+  color: #554d45;
+}
